@@ -6,6 +6,8 @@
 
   import baseUrl from '@/lib/url'
 
+  console.log(import.meta.url)
+
   const soundLib = [
     {
       name: 'Amogus',
