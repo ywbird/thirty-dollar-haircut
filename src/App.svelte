@@ -6,8 +6,6 @@
 
   import baseUrl from '@/lib/url'
 
-  console.log(import.meta.url)
-
   const soundLib = [
     {
       name: 'Amogus',
@@ -34,6 +32,8 @@
     { name: 'STARTUP', dir: baseUrl('/sounds/startup.mp3') },
     { name: 'Windows 7', dir: baseUrl('/sounds/windows-7.mp3') },
   ]
+
+  console.log(soundLib)
 
   Howler.volume(0.6)
 
