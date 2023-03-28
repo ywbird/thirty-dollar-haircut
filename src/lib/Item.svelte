@@ -3,6 +3,7 @@
   import type { ISound } from '@/types'
   import { Howl } from 'howler'
 
+  export let idx: number
   export let sound: ISound
 
   const playSound = new Howl({
@@ -22,16 +23,15 @@
     window.removeEventListener('contextmenu', enter)
   }
 
-  function append() {
-    playSound.play()
-    soundList.push(sound)
+  function remove() {
+    soundList.remove(idx)
   }
 </script>
 
 <button
   on:mouseenter={mouseenter}
   on:mouseleave={mouseleave}
-  on:click={append}
+  on:click={remove}
   class="item"
 >
   {sound.name}
